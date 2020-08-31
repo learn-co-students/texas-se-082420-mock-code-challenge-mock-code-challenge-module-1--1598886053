@@ -1,4 +1,8 @@
-require_relative '../config/environment.rb'
+
+require_relative passenger.rb
+
+
+ '../config/environment.rb'
 
 def reload
   load 'config/environment.rb'

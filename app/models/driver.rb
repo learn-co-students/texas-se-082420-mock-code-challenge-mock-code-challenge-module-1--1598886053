@@ -4,29 +4,29 @@ class Driver
 
    @@all = []
    
-    def initialize(name) #done
+    def initialize(name)
         @name = name
         self.class.all << self
     end
 
-    def name #done
+    def name
         @name
     end
 
-    def passenger_names #done
+    def passenger_names
        arr = self.rides.collect {|ride| ride.passenger}
        arr.uniq
     end
 
-    def rides #done
+    def rides
         Ride.all.select {|ride| ride.driver == self}
     end
 
-    def self.all #done
+    def self.all
         @@all
     end
 
-    def total_distance #done
+    def total_distance
         total = 0.0
         self.rides.each {|ride| total += ride.distance}
         total

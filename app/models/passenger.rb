@@ -21,17 +21,17 @@ class Passenger
             self.rides.collect {|ride| ride.driver}
         end
 
-        def total_distance #done
+        def total_distance
             total = 0.0
             self.rides.each {|ride| total += ride.distance}
             total.round(2)
         end
 
-        def self.all #done
+        def self.all
             @@all
         end
 
-        def self.premium_members #done
+        def self.premium_members
             self.all.select {|passenger| passenger.total_distance > 100.0}
         end
 end
